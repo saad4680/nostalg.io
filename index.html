@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel='stylesheet' href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="animate.css">
+	<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	
+
+
+</head>
+<body>
+	<header class="wrapper">	
+			<img src="assets/mpaa.png" alt="">
+			<h1>Movies you weren't supposed to watch<span class="fader">...but probably did anyway</span></h1>
+			<a href="#scroll1"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+	</header>
+
+
+	<div class="prelude" id="scroll1">
+		<div class="info">
+			<h2>Being an adult means you can do whatever you want, you get to do laundry, pay bills,  mealprep, cleaning and a job among other countless wonderful things <span class="period"> .</span></h2>
+			<h3>So when you want to kick back, relax and watch a film, you don't need to worry about pesky MPAA ratings,  here's how to discover some movies that were 17+ when you weren't<span class="period"> .</span></h3>
+			<a href="#movieScroll"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+		</div>
+		<form action="" name="multipleInputs" class="userInput" id="movieScroll">
+			<label for="birthYear">I was born in</label>
+			<input type="text" pattern= "[0-9]{4}" id="birthYear" required="true">
+			<label for="age">and I want to see movies I was too young to watch when I was </label>
+			<select name="ages" id="age">
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			    <option value="11">11</option>
+			    <option value="12">12</option>
+			    <option value="13">13</option>	    
+			</select>
+			<button href="#dynamicInputs" type="submit">Generate Movie Choices</button>
+		</form>
+	</div>
+	<div class="movieInfo" id="dynamicInputs"></div>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="jquery.smooth-scroll.js"></script>
+	<script src="script.js"></script>
+	<script src="dist/sweetalert.min.js"></script>
+
+	
+
+</body>
+</html>

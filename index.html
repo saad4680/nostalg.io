@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel='stylesheet' href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="animate.css">
@@ -13,17 +14,18 @@
 
 </head>
 <body>
+	<div class="mainwrapper">
 	<header class="wrapper">	
 			<img src="assets/mpaa.png" alt="">
-			<h1>Movies you weren't supposed to watch<span class="fader">...but probably did anyway</span></h1>
-			<a href="#scroll1"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+			<h1>Movies you weren't supposed to watch <span class="fader">        ...but probably did anyway</span></h1>
+			<a class="circleArrow" href="#scroll1"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 	</header>
 
 
 	<div class="prelude" id="scroll1">
 		<div class="info">
-			<h2>Being an adult means you can do whatever you want, you get to do laundry, pay bills,  mealprep, cleaning and a job among other countless wonderful things <span class="period"> .</span></h2>
-			<h3>So when you want to kick back, relax and watch a film, you don't need to worry about pesky MPAA ratings,  here's how to discover some movies that were 17+ when you weren't<span class="period"> .</span></h3>
+			<h2>Being an adult means you can do whatever you want, you get to do laundry,  mealprep and cleaning among other countless wonderful things <span class="period"> .</span></h2>
+			<h3>So when it's time to kick back, relax and watch a film, here's how to find and enjoy some movies that were 17+ when you weren't, You deserve it <span class="periodsmall">.</span></h3>
 			<a href="#movieScroll"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 		</div>
 		<form action="" name="multipleInputs" class="userInput" id="movieScroll">
@@ -40,7 +42,7 @@
 			    <option value="12">12</option>
 			    <option value="13">13</option>	    
 			</select>
-			<button href="#dynamicInputs" type="submit">Generate Movie Choices</button>
+			<button class="results" href="#dynamicInputs" type="submit">Generate Movie Choices</button>
 		</form>
 	</div>
 	<div class="movieInfo" id="dynamicInputs"></div>
@@ -52,6 +54,6 @@
 	<script src="dist/sweetalert.min.js"></script>
 
 	
-
+</div>
 </body>
 </html>

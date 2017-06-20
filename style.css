@@ -9,15 +9,33 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 html {
 	max-width: 100%;
+	
+}
+.mainwrapper {
 	overflow-x: hidden;
 }
 .movieInfo{
 	font-size:10px;
 
 }
+.movieContainer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
 
 .wrapper {
-	height:100vh;
+	min-height:100vh;
 	background-image: url(assets/herovader.jpg);
 	background-repeat: no-repeat;
 	background-size:cover;
@@ -30,6 +48,7 @@ html {
 	flex-direction: column;
 	-ms-align-items: center;
 	align-items: center;
+	justify-content: space-around;
 	text-align: center;
 	font-size: 16px;
 
@@ -37,6 +56,7 @@ html {
 .wrapper img {
 	width:350px;
 	margin-bottom: 60px;
+	padding:20px;
 }
 .wrapper i {
 	font-size: 50px;
@@ -65,10 +85,15 @@ h1 {
 	margin:0;
 	line-height: 42px;
 	letter-spacing: 1px;
+	font-size:30px;
 
 }
 .period {
 	font-size: 40px;
+	color:orangered;
+}
+.periodsmall{
+	font-size: 30px;
 	color:orangered;
 }
 .prelude h3 {
@@ -96,9 +121,10 @@ h1 {
 	font-size:24px;
 }
 .info h3 {
-	font-size:18px;
+	font-size:22px;
 }
 .info i {
+	font-size:40px;
 	color: orangered;
 }
 form {
@@ -106,8 +132,11 @@ form {
 	text-align: center;
 	font-size:26px;
 	font-family: 'Montserrat', sans-serif;
-	height:100vh;
+	min-height:100vh;
 	padding-top:45vh;
+	color:black;
+
+
 }
 form button{
 	display: block;
@@ -131,6 +160,7 @@ form input {
 	border-left: solid 1px transparent;
 	text-align: center;
 	width:100px;
+
 
 
 }
@@ -182,9 +212,15 @@ body select option {
 }
 .flickity-cell:hover p {
 	display:block;
+	overflow: hidden;
+	max-height:450px;
+
 }
 .flickity-cell{
 	position: relative;
+}
+.flickity-cell {
+
 }
 .flickity-cell img:hover {
 	filter: brightness(30%);
@@ -192,16 +228,34 @@ body select option {
 }
 .flickity-cell p {
 	width:270px;
+	max-height:200px;
 	position: absolute;
 	top:50%;
 	left:50%;
 	transform:translate(-50%,-50%);
 	color:white;
 	display:none;
+	transition: all 0.1s;
+	overflow: hidden;
 }
 .flickity-cell .synopsisContainer:hover img {
 	filter: brightness(30%);
 
+}
+.flickity-cell p:hover {
+ background-color: rgba(0,0,0,0.7);
+ border: 1px solid orangered;
+ padding:15px;
+ font-size:14px;
+ 
+
+
+}
+.hide {
+	display:none;
+}
+.flickity-cell img {
+	width:100%;
 }
 @media only screen and (max-width: 940px) {
 	
@@ -218,10 +272,12 @@ body select option {
 
 
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
 	.info {
 		display:none;
 	}
+	
+
 }
 
 
@@ -231,6 +287,7 @@ body select option {
 	.info {
 		display:none;
 	}
+
 	.wrapper i {
 		position: relative;
 		bottom:100px;
